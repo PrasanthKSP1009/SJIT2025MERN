@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties</title>
+    <style>
+        h1{
+            display: inline;
+        }
+        span{
+            margin: 20px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        img{
+            display: block;
+        }
+        .disp-none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is the display properties example</h1>
+    <ol>
+        <li>block</li>
+        <li>inline</li>
+        <li>inline-block</li>
+        <li>none</li>
+        <li>flex/flexbox</li>
+        <li>grid</li>
+    </ol>
+    <p>The below image tag is inline element but We are going to make it as block element.</p>
+    <img src="images.jpeg" alt=""><span>hello</span>
+    <h1>This is a block element but we are going to make it as inline </h1><span class="disp-none">hello</span>
+</body>
+</html>
