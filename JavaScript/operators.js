@@ -26,7 +26,7 @@ a = '4'
 b = 5
 console.log("This is != operator",a != b);
 console.log("This is !== operator",a !== b);
-*/
+
 
 a = 70
 b = 35
@@ -35,3 +35,14 @@ console.log(a^b);
 
 c = 1
 console.log(~c);
+*/
+
+//LSO
+console.log(55<<3);
+console.log(128<<1);
+
+
+//RSO
+console.log(55>>3);
+console.log(8>>3);
+console.log(1>>1);
