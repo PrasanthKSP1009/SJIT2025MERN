@@ -32,7 +32,7 @@ object1 = {
     "training": "MERN"
 }
 
-for (i in object1){
+for (let i in object1){
     console.log(i);
 }*/
 
@@ -62,6 +62,6 @@ object1 = {
     "training": "MERN"
 }
 
-Object.entries(object1).forEach((key,ele)=>{
+Object.entries(object1).forEach(([key,ele])=>{
     console.log(key,ele);
 })
