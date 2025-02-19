@@ -1,0 +1,8 @@
+nav{
+    display: flex;
+    list-style-type: none;
+    background-color: chocolate;
+    color: aliceblue;
+    justify-content: space-around;
+    padding: 10px;
+}
