@@ -3,6 +3,7 @@ import "../css/Navbar.css";
 import { useState } from "react";
 const Navbar = () => {
   var [dropdown, showDropdown] = useState(false);
+  var [dropdown1, showDropdown1] = useState(false);
   return (
     <header>
       <nav>
@@ -72,6 +73,29 @@ const Navbar = () => {
             HoC
           </Link>
         </li>
+        <div
+          className="dropdown"
+          onMouseEnter={() => showDropdown1(!dropdown1)}
+          onMouseLeave={() => showDropdown1(!dropdown1)}
+        >
+          <span className="link">Memoization</span>
+          
+            {dropdown1 && (
+              <ol className="dropdown-list">
+              <li>
+                <Link to="/memo" className="dropdown-link">
+                  Memo
+                </Link>
+              </li>
+              <li>
+                <Link to="/lazy" className="dropdown-link">
+                  Lazy Component
+                </Link>
+              </li>
+              </ol>
+            )}
+          
+        </div>
         <li>
           <Link to="/contact" className="link">
             Contact
