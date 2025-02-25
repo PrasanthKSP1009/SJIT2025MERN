@@ -1,9 +1,10 @@
 const express = require("express");
 const mdb = require("mongoose");
 const dotenv = require("dotenv");
+const bcrypt = require("bcrypt");
 const Signup = require("./models/signupSchema");
 const app = express();
-app.use(express.json())
+app.use(express.json());
 const PORT = 3001;
 dotenv.config();
 
@@ -25,15 +26,16 @@ app.get("/static", (req, res) => {
   );
 });
 
-app.post("/signup", (req, res) => {
+app.post("/signup", async (req, res) => {
   try {
     console.log(req.body);
     const { firstName, lastName, email, password, phoneNumber } = req.body;
+    const hashedPassword = await bcrypt.hash(password, 10);
     const newSignup = new Signup({
       firstName: firstName,
       lastName: lastName,
       email: email,
-      password: password,
+      password: hashedPassword,
       phoneNumber: phoneNumber,
     });
     newSignup.save();
