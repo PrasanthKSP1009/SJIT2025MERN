@@ -5,10 +5,12 @@ const bcrypt = require("bcrypt");
 const cors = require('cors')
 const Signup = require("./models/signupSchema");
 const app = express();
+
 app.use(cors({
-  origin:"https://sjit-mern.vercel.app/",
-  methods:['GET','POST']
-}))
+  origin: "https://sjit-mern.vercel.app/",
+  credentials: true,
+  methods: ['GET', 'POST']
+}));
 app.use(express.json());
 const PORT = 3001;
 dotenv.config();
