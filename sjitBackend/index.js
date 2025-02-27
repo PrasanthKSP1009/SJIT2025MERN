@@ -5,9 +5,12 @@ const bcrypt = require("bcrypt");
 const cors = require('cors')
 const Signup = require("./models/signupSchema");
 const app = express();
-
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://sjit-mern.vercel.app/',
+];
 app.use(cors({
-  origin: ["https://sjit-mern.vercel.app/"],
+  origin: allowedOrigins,
   credentials: true,
   methods: ['GET', 'POST']
 }));
