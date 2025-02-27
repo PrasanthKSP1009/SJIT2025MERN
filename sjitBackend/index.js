@@ -7,7 +7,7 @@ const Signup = require("./models/signupSchema");
 const app = express();
 
 app.use(cors({
-  origin: "https://sjit-mern.vercel.app/",
+  origin: ["https://sjit-mern.vercel.app/"],
   credentials: true,
   methods: ['GET', 'POST']
 }));
